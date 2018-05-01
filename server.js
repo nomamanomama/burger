@@ -1,11 +1,19 @@
 // Dependencies
 var express = require("express");
 var exphbs = require("express-handlebars");
+var bodyParser = require("body-parser");
+
 //load environment variables from .env file
 require('dotenv').config();
 
 // Create an instance of the express app.
 var app = express();
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// parse application/json
+app.use(bodyParser.json());
 
 // Set the port of our application
 // process.env.PORT lets the port be set by Heroku

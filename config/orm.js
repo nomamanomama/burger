@@ -14,7 +14,7 @@ var orm = {
     },
 
     insertOne: function (table, colname, value, callback) {
-        var queryString = `INSERT INTO ${table} (${colname}) VALUES(${value});`;
+        var queryString = `INSERT INTO ${table} (${colname}) VALUES('${value}');`;
         console.log(queryString);
         connection.query(queryString, function (err, res) {
             if (err) { throw err; }

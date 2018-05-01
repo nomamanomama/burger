@@ -24,8 +24,8 @@ router.get("/", function (req, res) {
 
 router.post("/burger/create", function (req, res){
         console.log("routed to create path")
-        console.log('body: ' + JSON.stringify(req.body));
-        burger.insertOne(req.stack.name, function(result) {
+        console.log('body: ' + JSON.stringify(req.body.name));
+        burger.insertOne(req.body.name, function(result) {
                 res.json({id: result.insertId});
         });
 });
