@@ -9,7 +9,7 @@ var router = express.Router();
 router.get("/", function (req, res) {
         //get available burgers
         burger.selectAll(function (results) {
-                console.log(results);
+                //console.log(results);
                 var burgers = [];
                 results.forEach(element => {
                         burgers.push(element);
@@ -23,8 +23,8 @@ router.get("/", function (req, res) {
 }); 
 
 router.post("/burger/create", function (req, res){
-        console.log("routed to create path")
-        console.log('body: ' + JSON.stringify(req.body.name));
+        //console.log("routed to create path")
+        //console.log('body: ' + JSON.stringify(req.body.name));
         burger.insertOne(req.body.name, function(result) {
                 res.json({id: result.insertId});
         });

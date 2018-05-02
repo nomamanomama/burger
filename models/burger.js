@@ -8,7 +8,6 @@ var burger = {
             cb(res);
         });
     },
-    // (table, condition, conditionvalue, updateCol, updateVal, callback)
     updateOne: function (conditionVal, updateCol, updateVal, cb) {
         orm.updateOne('burgers', conditionVal, updateCol, updateVal, function (res) {
             cb(res);
