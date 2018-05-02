@@ -15,11 +15,11 @@ MySQL, Node, Express, Handlebars and custom ORM.
 MVC design pattern
 
 ## Dependencies
-express
-express-handlebars
-body-parser
-mysql
-dotenv
+- express
+- express-handlebars
+- body-parser
+- mysql
+- dotenv
 
 ## Installation
 - copy code from github repository
